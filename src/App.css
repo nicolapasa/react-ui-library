@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+ 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+button {
+  outline: none;
+  border:1px solid rgba(33, 33, 33, 0.2);
+  font-size: 20px;
+  padding: 10px 15px;
+  background-color: rgb(24, 24, 25);
+  color: white;
+}
+.block{
+  margin: 40px 0;
+  padding: 30px;
+}
+
+/*buttons*/
+.rounded{
+  border-radius: 5px;
+}
+
+.primary{
+  background-color: rgba(25, 25, 213, 0.8);
+}
+.danger{
+  background-color: rgba(234, 19, 19, 0.8);
+}
+.info{
+  background-color: rgba(226, 34, 162, 0.8);
+}
+.default{
+  color: black;
+  background-color: aliceblue;
+}
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+/*cards*/
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  background-color: rgb(251, 251, 252);
+  width: 300px;
+  
+}
+
+.card-body{
+  padding: 5px;
+}
+.card img{
+  width: 100%;
+  object-fit: cover;
+}
+.bordered{
+  border: 1px solid rgb(211, 209, 209);
+}
+
+.shadow{
+  box-shadow: 1px 1px rgba(33, 33, 33, 0.2);
+}
+/* accordion*/
+.accordion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  width: 500px;
+}
+
+.section{
+
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  text-align: left;
+}
+.section h1{
+  font-size: 18px;
+  border-bottom: 1px solid rgb(234, 235, 236);
+
+  padding: 5px;
+}
+.section p{
+  border-bottom: 1px solid rgb(234, 235, 236);
+}
+/*alert*/
+.alert{
+
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid rgb(243, 241, 241);
+  border-radius: 5px;
+  box-shadow: 1px 1px rgba(33, 33, 33, 0.2);
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  color:#636262;
+}
+
+.alertTitle{
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.alertContent{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/*dialog*/
+
+.containerDialog{
+  background-color: rgba(15, 15, 15, 0.8);
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.dialog{
+  position: absolute;
+  top:50%;
+  left:40%;
+  right: 40%;
+  background-color: rgb(252, 254, 255);
+  padding: 50px 100px;
+  border-radius: 5px;
+  box-shadow: 1px 1px rgba(33, 33, 33, 0.2);
+
+}
+.dialog button{
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.dialogBody{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.badge{
+  background-color: black;
+  color:white;
+  border-radius: 10px;
+  box-shadow: 1px 1px rgba(33, 33, 33, 0.2);
+  padding:5px 10px;
+  width: max-content;
+}
+
+.badge:hover{
+  background-color: rgb(60, 60, 60);
+}
+
+/*calendar*/
+.calendar{
+  width: 400px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-shadow: 1px 1px rgba(33, 33, 33, 0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.calendarHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendarBody{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap:5px;
+}
+
+.cell{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.active{
+  background-color: black;
+  color:white;
+}
+
+.noactive{
+  background-color: none;
+}
+
+.carousel{
+ border: 1px solid rgba(33, 33, 33, 0.2);
+ border-radius: 5px;
+ padding:10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ position: relative;
+ width: 500px;
+ height: 500px;
+}
+.next{
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+}
+.prev{
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+}
+.item{
+  position: absolute;
+}
+.item.fade-in {
+
+  animation: fade-in 0.7s ease-in forwards;
+}
+
+.item.fade-out {
+  animation: fade-out 0.7s ease-out forwards;
+}
+/* Animation keyframes */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
